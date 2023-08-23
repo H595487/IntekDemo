@@ -72,3 +72,11 @@ button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
+#emergencyStop {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 20px;
+}
+

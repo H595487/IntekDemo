@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
         connectBtn.disabled = true;
         startScanBtn.disabled = false;
     });
+    function updateRobotStatus(status) {
+        document.getElementById('robotStatus').querySelector('span').innerText = status;
+    }
 
     startScanBtn.addEventListener("click", function() {
         scanStatus.textContent = "Aktiv";
@@ -24,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Simulating the robot's movement and detection
         setTimeout(() => {
             currentPosition.textContent = "(X: 5, Y: 7)";
+            updateRobotStatus("Scanning...");
             let hindringEntry = document.createElement("p");
             hindringEntry.textContent = "Hindring oppdaget ved (X: 5, Y: 7) kl. 14:30";
             hindringerLog.appendChild(hindringEntry);
@@ -33,7 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
     stopScanBtn.addEventListener("click", function() {
         scanStatus.textContent = "Avsluttet";
         stopScanBtn.disabled = true;
+        updateRobotStatus("Idle");
         scanSummary.textContent = "1 hindring oppdaget, tid brukt: 2 sekunder";
     });
+
+    document.getElementById('emergencyStop').addEventListener('click', function() {
+        alert("NØDSTOPP aktivert! Robot stopper umiddelbart.");
+        // Her kan vi legge til faktisk kode for å sende en nødstopp-kommando til roboten i en virkelig implementasjon.
+    });
+
 });
+
 
