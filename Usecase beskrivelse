@@ -1,0 +1,16 @@
+Use Case: Interaktiv Styring av ur5e fra Laptop
+
+Mål: Muliggjøre interaksjon med Universal Robots ur5e via en laptop-grensesnitt, der brukeren kan sette roboten i "scanmode" for å utforske sitt miljø og lete etter fysiske hindringer.
+
+Aktør: Operatør/bruker
+
+Beskrivelse:
+Programstart: Operatøren lanserer applikasjonen fra laptopen.
+Tilkobling: Ved hjelp av grensesnittet kan operatøren koble seg til roboten via en valgt kommunikasjonsmetode (f.eks. Bluetooth, Wi-Fi).
+Statusvisning: Etter vellykket tilkobling viser GUI robotens nåværende status og posisjon.
+Aktivering av Scanmode: Brukeren kan sette roboten i "Scanmode" via et dedikert kontrollpanel.
+Utforsking: I Scanmode beveger roboten seg tilfeldig rundt for å identifisere og registrere hindringer.
+Hindringsdeteksjon: Hvis en hindring er identifisert, vil grensesnittet gi en melding eller indikator for brukeren.
+Avslutning: Etter endt scanning eller ved identifisering av en hindring, vil roboten returnere til sin startposisjon.
+Oppsummering: Grensesnittet vil presentere en oppsummering av scanningen, inkludert tid brukt, antall hindringer oppdaget, og andre relevante data.
+Merknad: En sentral komponent i denne demonstrasjonen er en visualisering av en "digital tvilling" av roboten, representert som et plassholderbilde i denne demo. I en full implementasjon kan dette være en dynamisk visualisering generert i et verktøy som Unity.
