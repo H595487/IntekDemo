@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Control Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Robot Control Interface</h1>
+    </header>
+    <section class="main-section">
+        <div class="panels">
+            <div class="panel tilkoblingspanel">
+                <h2>Tilkoblingspanel</h2>
+                <button id="connect-btn">Koble til</button>
+                <p>Status: <span id="robot-status">Ikke tilkoblet</span></p>
+                <p>Batterinivå: <span id="battery-level">N/A</span></p>
+            </div>
+            <div class="panel kontrollpanel">
+                <h2>Kontrollpanel</h2>
+                <button id="start-scan-btn">Start Scanmode</button>
+                <button id="stop-scan-btn">Avslutt Scanmode</button>
+                <p>Scanmode status: <span id="scan-status">Inaktiv</span></p>
+            </div>
+            <div class="panel informasjonspanel">
+                <h2>Informasjonspanel</h2>
+                <p>Nåværende posisjon: <span id="current-position">N/A</span></p>
+                <div id="hindringer-log">
+                    <!-- Hindringer log entries will appear here -->
+                </div>
+                <p>Oppsummering av scanmode: <span id="scan-summary">N/A</span></p>
+            </div>
+        </div>
+        <div class="robot-twin">
+            <!-- Placeholder for the Unity digital twin visual -->
+            <img src="placeholder.png" alt="Digital Twin of the Robot" id="digital-twin-img" >
+        </div>
+    </section>
+    <footer>
+        <p>Designed by Simen Swensen</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
